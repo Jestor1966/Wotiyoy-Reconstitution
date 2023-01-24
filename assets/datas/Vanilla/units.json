@@ -1,0 +1,40 @@
+[
+	{
+		"name":"Farmer",
+		"strength":1,
+		"defense":1,
+		"movement":4,
+		"manpowerSpend":1,
+		"sea":false,
+		"range":1,
+	},
+	{
+		"name":"Spearman",
+		"strength":2,
+		"defense":2,
+		"movement":4,
+		"manpowerSpend":2,
+		"sea":false,
+		"range":1,
+	},
+	{
+		"name":"Baron",
+		"strength":3,
+		"defense":3,
+		"movement":4,
+		"manpowerSpend":3,
+		"sea":false,
+		"range":1,
+	},
+	{
+		"name":"Knight",
+		"strength":4,
+		"defense":4,
+		"movement":4,
+		"manpowerSpend":4,
+		"sea":false,
+		"range":1,
+	},
+
+
+]
