@@ -17,6 +17,7 @@ import yio.tro.antiyoy.gameplay.diplomacy.DiplomacyInfoCondensed;
 import yio.tro.antiyoy.gameplay.game_view.GameView;
 import yio.tro.antiyoy.gameplay.loading.LoadingManager;
 import yio.tro.antiyoy.gameplay.loading.LoadingParameters;
+import yio.tro.antiyoy.gameplay.loading.gameDatas.GameDataInitialization;
 import yio.tro.antiyoy.gameplay.name_generator.CityNameGenerator;
 import yio.tro.antiyoy.gameplay.name_generator.CustomCityNamesManager;
 import yio.tro.antiyoy.gameplay.replays.ReplaySaveSystem;
@@ -77,7 +78,7 @@ public class YioGdxGame extends ApplicationAdapter implements InputProcessor {
     public SkinManager skinManager;
     public Stage stage; // for keyboard input
     public InputMultiplexer inputMultiplexer;
-    //UnitLoader unitLoader=new UnitLoader("VANILLA");
+    public GameDataInitialization gameDataInitialization;
 
 
     public YioGdxGame() {
@@ -159,6 +160,9 @@ public class YioGdxGame extends ApplicationAdapter implements InputProcessor {
         YioGdxGame.say("full loading time: " + (System.currentTimeMillis() - time1));
         checkForSingleMessageOnStart();
         checkToShowIosCheckMyGames();
+
+
+        gameDataInitialization=new GameDataInitialization();
     }
 
 

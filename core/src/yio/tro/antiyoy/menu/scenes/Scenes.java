@@ -28,6 +28,7 @@ public class Scenes {
     public static SceneEditorOverlay sceneEditorOverlay;
     public static SceneGameOverlay sceneGameOverlay;
     public static SceneSelectionOverlay sceneSelectionOverlay;
+    public static SceneShortInformation sceneShortInformation;
     public static ScenePauseMenu scenePauseMenu;
     public static SceneIncomeGraph sceneIncomeGraph;
     public static SceneTutorialTip sceneTutorialTip;

@@ -69,12 +69,18 @@ public class Fonts {
         return langChars + SPECIAL_CHARACTERS;
     }
 
+    public void vanillaLoader(){
+        FileHandle fileUnit=Gdx.files.internal("datas/Vanilla/units.json");
+        String unitsDatas=fileUnit.readString();
+        System.out.println(unitsDatas);
+    }
 
     private static void initFontChinese() {
         if (!LanguagesManager.getInstance().getLanguage().equals("cn_CN")) return;
 
         FileHandle fontFile1 = Gdx.files.internal("chinese/Chinese.fnt");
         FileHandle fontFile2 = Gdx.files.internal("chinese/Chinese.png");
+
         buttonFont = new BitmapFont(fontFile1, fontFile2, true);
         gameFont = new BitmapFont(fontFile1, fontFile2, false);
         microFont = new BitmapFont(fontFile1, fontFile2, false);

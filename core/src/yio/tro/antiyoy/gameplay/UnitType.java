@@ -1,23 +1,35 @@
 package yio.tro.antiyoy.gameplay;
 
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson2.JSON;
+
+import java.util.HashMap;
+import java.util.List;
+
 public class UnitType {
 
-    public String name;
-    public int strength;
-    public int defense;
-    public int movement;
-    public int manpowerSpend;
-    public boolean sea;
-    public int range;
+    String name;
+    int strength;
+    int defense;
+    int movement;
+    int manpowerSpend;
+    int range;
+    int rangeStrength;
+    int cost;
+    int maintain;
+    HashMap<String, Boolean> terrainAdaption;
 
-    public UnitType(String name,int strength,int defense,int movement,int manpowerSpend,boolean sea,int range){
+    public UnitType(String name, int strength, int defense, int movement, int manpowerSpend, int range, int rangeStrength, int cost, int maintain, HashMap<String, Boolean> terrainAdaption){
         this.name=name;
         this.strength=strength;
         this.defense=defense;
         this.movement=movement;
         this.manpowerSpend=manpowerSpend;
-        this.sea=sea;
+        this.rangeStrength=rangeStrength;
+        this.cost=cost;
+        this.maintain=maintain;
         this.range = range;
+        this.terrainAdaption=terrainAdaption;
     }
 
     public String getName(){
@@ -40,31 +52,13 @@ public class UnitType {
         return manpowerSpend;
     }
 
-    public boolean getSea(){return sea;}
-
     public int getRange(){return range;}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public int getRangeStrength(){return rangeStrength;}
 
-    public void setStrength(int strength){
-        this.strength = strength;
-    }
+    public int getCost(){return cost;}
 
-    public void setDefense(int defense) {
-        this.defense = defense;
-    }
+    public int getMaintain(){return maintain;}
 
-    public void setMovement(int movement) {
-        this.movement = movement;
-    }
-
-    public void setManpowerSpend(int manpowerSpend) {
-        this.manpowerSpend = manpowerSpend;
-    }
-
-    public void setSea(boolean sea){this.sea=sea;}
-
-    public void setRange(int range){this.range=range;}
+    public HashMap<String, Boolean> getTerrainAdaption(){return terrainAdaption;}
 }

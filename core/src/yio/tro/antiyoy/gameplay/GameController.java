@@ -14,7 +14,7 @@ import yio.tro.antiyoy.gameplay.editor.LevelEditorManager;
 import yio.tro.antiyoy.gameplay.highlight.HighlightManager;
 import yio.tro.antiyoy.gameplay.loading.LoadingManager;
 import yio.tro.antiyoy.gameplay.loading.LoadingParameters;
-import yio.tro.antiyoy.gameplay.loading.LoadingType;
+import yio.tro.antiyoy.gameplay.loading.gameDatas.UnitLoader;
 import yio.tro.antiyoy.gameplay.messages.MessagesManager;
 import yio.tro.antiyoy.gameplay.replays.ReplayManager;
 import yio.tro.antiyoy.gameplay.rules.GameRules;
@@ -65,6 +65,7 @@ public class GameController {
     public MapGenerator mapGeneratorSlay;
     public MapGeneratorGeneric mapGeneratorGeneric;
     public Unit jumperUnit;
+    public UnitLoader unitLoader;
     public MatchStatistics matchStatistics;
     public GameSaver gameSaver;
     public Forefinger forefinger;
@@ -135,6 +136,7 @@ public class GameController {
         messagesManager = new MessagesManager(this);
         highlightManager = new HighlightManager(this);
         finishGameManager = new FinishGameManager(this);
+        unitLoader = new UnitLoader("VANILLA");
 
         LoadingManager.getInstance().setGameController(this);
         TouchMode.createModes(this);
